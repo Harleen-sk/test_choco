@@ -10,7 +10,7 @@ on:
 
 jobs:
   what_time_is_it:
-  runs-on: unbuntu_latest
-  steps:
-  - name: "What's the time?"
-    run: "date +%T"
+    runs-on: unbuntu_latest
+    steps:
+    - name: "What's the time?"
+      run: "date +%T"
