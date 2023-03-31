@@ -1,0 +1,27 @@
+name: Repository Mirroring
+
+on:
+  push:
+    branches-ignore:
+    - "ga-ignore-*"
+  pull_request:
+    branches-ignore:
+    - "ga-ignore-*"
+
+env:
+  SOURCE: Harleen-sk/test_choco
+  MIRROR: "EpitechPromo2027/B-DOP-200-PAR-2-1-chocolatine-harleen.singh-kaur"
+  GITHUB_SSH_KEY: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
+
+jobs:
+  repository_mirroring:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Push the content to the mirror repository
+      uses: pixta-dev/repository-mirroring-action@v1
+      with:
+        target_repo_url: git@github.com:${{ env.MIRROR }}.git
+        ssh_private_key: ${{ env.GITHUB_SSH_KEY }}
