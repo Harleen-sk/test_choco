@@ -16,4 +16,4 @@ jobs:
     - name: "Display the current branche we are on"
       run: echo "The workflow is running on branch '${GITHUB_REF#refs/heads/}'"
     - name: "Get the size of the repository (without the .git folder)"
-      run: echo "$(du -skh --exclude=\".git\")""
+      run: echo "$(du -skh --exclude=\".git\")"
