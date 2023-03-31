@@ -4,8 +4,8 @@ on:
   push:
     branches-ignore:
     - "ga-ignore-*"
-    pull_request:
-      branches_ignore:
+  pull_request:
+    branches_ignore:
     - "ga-ignore-*"
 
 jobs:
