@@ -11,11 +11,13 @@ OBJ		=	$(SRC:.c=.o)
 
 NAME	=	choco
 
+CPPFLAGS	= Iinclude	
+
 all: $(NAME)
 
 $(NAME):	$(OBJ)
 		echo "hi"
-		gcc -o $(NAME) $(OBJ)
+		gcc -o $(NAME) $(OBJ) $(CPPFLAGS)
 
 tests_run:
 		echo "bye"
