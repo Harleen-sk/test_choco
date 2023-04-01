@@ -33,6 +33,7 @@ jobs:
       run: ./$CODING_STYLE_CHECKER
     - name: checking the results
       run: |
+        ls -lsa
         chmod +x ./BASH_CHECKER
         ./BASH_CHECKER && exit $? || exit 1
 
