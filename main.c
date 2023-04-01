@@ -8,7 +8,17 @@
 #include <stdio.h>
 #include "my.h"
 
-int main(int ac, char **av)
-{
+int main(int ac, char **av) {
+
+
+
+
+
+
+
+
+
+
+
     return sub_main(ac, av);
 }
