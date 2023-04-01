@@ -52,7 +52,7 @@ jobs:
     - name: compile code
       run: |
         chmod +x ./$RUN_IN_EPITEST
-        ./$RUN_IN_EPITEST "make clean && exit $? || exit 1"
+        ./$RUN_IN_EPITEST "make && exit $? || exit 1"
     - name: clean code
       run: |
         chmod +x ./$RUN_IN_EPITEST
