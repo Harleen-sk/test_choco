@@ -5,11 +5,14 @@
 ## Makefile
 ##
 
-SRC 	=	./main.c	\
-			./sub_main.c	\
+MAIN_SRC	=	main.c
+
+SRC 	=	./sub_main.c	\
 			./my_putstr.c	\
 
 OBJ		=	$(SRC:.c=.o)
+
+MAIN_OBJ		=	$(MAIN_SRC:.c=.o)
 
 NAME	=	choco
 
@@ -19,13 +22,13 @@ TEST_NAME	=	unit_test
 
 all: $(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ) $(MAIN_OBJ)
 		echo "hi"
-		gcc -o $(NAME) $(OBJ) $(CPPFLAGS)
+		gcc -o $(NAME) $(MAIN_OBJ) $(OBJ) $(CPPFLAGS)
 
 tests_run:
 		echo "bye"
-		gcc -o $(TEST_NAME) $(SRC) tests/test_my_putstr.c --coverage -lcriterion $(CPPFLAGS)
+		gcc -o $(TEST_NAME) tests/test_my_putstr.c $(CPPFLAGS) $(SRC) --coverage -lcriterion
 		./$(TEST_NAME)
 
 clean:
