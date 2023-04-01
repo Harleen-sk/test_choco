@@ -5,13 +5,15 @@
 ## Makefile
 ##
 
-SRC 	=	main.c	\
+SRC 	=	./main.c	\
 
 OBJ		=	$(SRC:.c=.o)
 
 NAME	=	choco
 
-CPPFLAGS	= Iinclude	
+CPPFLAGS	= -I./include	
+
+TEST_NAME	=	unit_test
 
 all: $(NAME)
 
@@ -21,8 +23,8 @@ $(NAME):	$(OBJ)
 
 tests_run:
 		echo "bye"
-		gcc -o unit_test $(SRC) tests/test_my_putstr.c --coverage -lcriterion
-		./unit_tests
+		gcc -o $(TEST_NAME) $(SRC) tests/test_my_putstr.c --coverage -lcriterion
+		./$(TEST_NAME)
 
 clean:
 		rm -f $(OBJ)
