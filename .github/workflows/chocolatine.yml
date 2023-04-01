@@ -34,8 +34,8 @@ jobs:
     - name: checking the results
       run: |
         ls -lsa
-        chmod +x ./BASH_CHECKER
-        ./BASH_CHECKER && exit $? || exit 1
+        chmod +x ./$BASH_CHECKER
+        ./$BASH_CHECKER && exit $? || exit 1
 
   check_program_compilation:
     runs-on: ubuntu-latest
