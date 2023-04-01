@@ -23,7 +23,7 @@ $(NAME):	$(OBJ)
 
 tests_run:
 		echo "bye"
-		gcc -o $(TEST_NAME) $(SRC) tests/test_my_putstr.c --coverage -lcriterion
+		gcc -o $(TEST_NAME) $(SRC) tests/test_my_putstr.c --coverage -lcriterion $(CPPFLAGS)
 		./$(TEST_NAME)
 
 clean:

@@ -2,13 +2,12 @@
 ** EPITECH PROJECT, 2022
 ** test_choco
 ** File description:
-** main.c
+** sub_main.c
 */
 
-#include <stdio.h>
 #include "my.h"
 
-int main(int ac, char **av)
+int sub_main(int ac, char **av)
 {
-    return sub_main(ac, av);
+    my_pustr("hello World\n");
 }
