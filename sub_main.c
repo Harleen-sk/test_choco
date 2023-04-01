@@ -9,5 +9,6 @@
 
 int sub_main(int ac, char **av)
 {
-    my_pustr("hello World\n");
+    my_putstr("hello World\n");
+    return 0;
 }

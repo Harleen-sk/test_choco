@@ -6,6 +6,8 @@
 ##
 
 SRC 	=	./main.c	\
+			./sub_main.c	\
+			./my_putstr.c	\
 
 OBJ		=	$(SRC:.c=.o)
 

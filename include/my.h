@@ -10,6 +10,7 @@
 
     #include <unistd.h>
 
-int my_pustr(char const *str);
+int my_putstr(char const *str);
+int sub_main(int ac, char **av);
 
 #endif
