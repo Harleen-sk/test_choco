@@ -14,10 +14,12 @@ NAME	=	choco
 all: $(NAME)
 
 $(NAME):	$(OBJ)
+		echo "hi"
 		gcc -o $(NAME) $(OBJ)
 
 tests_run:
-		gcc -o unit_test $(SRC) tests/test_my_printf.c --coverage -lcriterion
+		echo "bye"
+		gcc -o unit_test $(SRC) tests/test_my_putstr.c --coverage -lcriterion
 		./unit_tests
 
 clean:
