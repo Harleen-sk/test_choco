@@ -27,7 +27,7 @@ $(NAME):	$(OBJ) $(MAIN_OBJ)
 
 tests_run:
 		gcc -o $(TEST_NAME) tests/test_my_putstr.c
-		(CPPFLAGS) $(SRC) --coverage -lcriterion
+		$(CPPFLAGS) $(SRC) --coverage -lcriterion
 		./$(TEST_NAME)
 
 clean:
