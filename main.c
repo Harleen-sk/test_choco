@@ -10,5 +10,9 @@
 
 int main(int ac, char **av)
 {
-    return sub_main(ac, av);
+    //return sub_main(ac, av);
+     my_putstr("hello World\n");
+
+    
+    return 0;
 }
