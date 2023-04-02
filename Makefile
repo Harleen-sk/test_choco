@@ -16,11 +16,11 @@ MAIN_OBJ		=	$(MAIN_SRC:.c=.o)
 
 NAME	=	choco
 
-CPPFLAGS	= -I./include	
+CPPFLAGS	= -I./include
 
 TEST_NAME	=	unit_test
 
-all: $(NAME)
+all:	$(NAME)
 
 $(NAME):	$(OBJ) $(MAIN_OBJ)
 		gcc -o $(NAME) $(MAIN_OBJ) $(OBJ) $(CPPFLAGS)
@@ -31,6 +31,7 @@ tests_run:
 
 clean:
 		rm -f $(OBJ)
+		rm -f $(MAIN_OBJ)
 
 fclean: clean
 		rm -f $(NAME)

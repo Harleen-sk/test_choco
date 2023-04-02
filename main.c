@@ -10,7 +10,6 @@
 
 int main(int ac, char **av)
 {
-    //return other_main(ac, av);
-     my_putstr("hello World\n");
+    my_putstr("hello World\n");
     return 0;
 }
