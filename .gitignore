@@ -1,1 +1,4 @@
 keys/*
+*.o
+*.gcda
+*.gcno

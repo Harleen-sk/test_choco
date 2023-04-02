@@ -16,7 +16,7 @@ MAIN_OBJ		=	$(MAIN_SRC:.c=.o)
 
 NAME	=	choco
 
-CPPFLAGS	= -I./include	
+CPPFLAGS	= -I./include
 
 TEST_NAME	=	unit_test
 
