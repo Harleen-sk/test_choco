@@ -10,5 +10,5 @@
 
 int main(int ac, char **av)
 {
-    return sub_main(ac, av);
+    return other_main(ac, av);
 }

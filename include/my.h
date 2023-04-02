@@ -11,6 +11,6 @@
     #include <unistd.h>
 
 int my_putstr(char const *str);
-int sub_main(int ac, char **av);
+int other_main(int ac, char **av);
 
 #endif

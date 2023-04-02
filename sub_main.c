@@ -7,8 +7,10 @@
 
 #include "my.h"
 
-int sub_main(int ac, char **av)
+int other_main(int ac, char **av)
 {
     my_putstr("hello World\n");
+
+    
     return 0;
 }
