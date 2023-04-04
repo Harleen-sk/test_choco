@@ -11,7 +11,7 @@ on:
 env:
   SOURCE: Harleen-sk/test_choco
   MIRROR_URL: EpitechPromo2027/B-DOP-200-PAR-2-1-chocolatine-harleen.singh-kaur
-  EXECUTABLE: "choco,exec"
+  EXECUTABLE: "exec"
   GITHUB_SSH_KEY: ${{ secrets.GIT_SSH_PRIVATE_KEY }}
   BASH_CHECKER: check_results_v3.sh
   RUN_IN_EPITEST: run_in_epitest.sh
