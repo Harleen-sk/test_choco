@@ -11,5 +11,5 @@ void redirect_all_stdout(void)
 Test(my_putstr, simple_string, .init = redirect_all_stdout)
 {
     my_putstr("hello World\n");
-    cr_assert_stdout_eq_str("hello World\n");
+    cr_assert_stdout_eq_str("hellO World\n");
 }
