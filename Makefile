@@ -20,13 +20,17 @@ CPPFLAGS	= -I./include
 
 TEST_NAME	=	unit_test
 
+TEST_FILES	=	tests/test_my_putstr.c
+
+TEST_FLAGS	=	--coverage -lcriterion
+
 all: $(NAME)
 
 $(NAME):	$(OBJ) $(MAIN_OBJ)
 		gcc -o $(NAME) $(MAIN_OBJ) $(OBJ) $(CPPFLAGS)
 
 tests_run:
-		gcc -o $(TEST_NAME) tests/test_my_putstr.c $(CPPFLAGS) $(SRC) --coverage -lcriterion
+		gcc -o $(TEST_NAME) $(TEST_FILES) $(CPPFLAGS) $(SRC) $(TEST_FLAGS)
 		./$(TEST_NAME)
 
 clean:
