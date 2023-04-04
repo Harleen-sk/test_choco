@@ -34,7 +34,6 @@ jobs:
       run: ./$CODING_STYLE_CHECKER $(pwd) $(pwd)
     - name: checking the results
       run: |
-        ls -lsa
         chmod +x ./$BASH_CHECKER
         ./$BASH_CHECKER && exit $? || exit 1
 
@@ -61,8 +60,6 @@ jobs:
       run: |
         IFS=',' read -ra VARS <<< "${EXECUTABLE}"
         chmod +x ./$RUN_IN_EPITEST
-        echo ${VARS[@]}
-        ls -lsa
         ./$RUN_IN_EPITEST "chmod +x ./${CHECK_IF_PRESENT} ${VARS[@]} && exit $? || exit 1"
     - name: check if executable
       run: |

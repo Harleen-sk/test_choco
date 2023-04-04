@@ -1,0 +1,6 @@
+./Makefile:19: MINOR:C-G7
+./Makefile:33: MINOR:C-G7
+./choco:1: MAJOR:C-O1
+./main.c:11: MINOR:C-L4
+./my_putstr.c:21: INFO:C-A3
+./sub_main.c:14: INFO:C-A3
