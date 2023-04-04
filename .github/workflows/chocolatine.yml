@@ -31,7 +31,7 @@ jobs:
     - name: assign execution rights to $CODING_STYLE_CHECKER
       run: chmod +x ./$CODING_STYLE_CHECKER
     - name: run $CODING_STYLE_CHECKER
-      run: ./$CODING_STYLE_CHECKER
+      run: ./$CODING_STYLE_CHECKER $(pwd) $(pwd)
     - name: checking the results
       run: |
         ls -lsa
